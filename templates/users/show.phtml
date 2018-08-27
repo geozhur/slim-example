@@ -1,0 +1,6 @@
+<?php
+
+$app->get('/users/{id}', function ($request, $response, $args) {
+    $params = ['id' => $args['id']];
+    return $this->renderer->render($response, 'users/show.phtml', $params);
+});
